@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./client.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <nav>
+        <img  class="logo" src="./files/live-chat.png" alt="chatImage">
+    </nav>
+    <div id="welcome">
+            
+    </div>
+    <div id="typing">
+            
+    </div>
+    <div id="chat-container">
+        <div id="message-list">
+            <!-- this will contain all other messages -->
+        </div>
+    </div>
+    <div>
+        <form action="#" id="send-container">
+            <input type="text" id="message-input" placeholder="Enter your message..." onfocus="typingFunc()" onblur="typingFunc2()">
+            <button type="submit" id ="send-message" class="btn">Send</button>
+        </form>
+    </div>
+    <div id="users-list">
+        <div id="connected"><span>Connected Users : </span><span id="cnt"></span></div>
+        <div id="users">
+    
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <p>NICE TO HAVE YOU HERE</p>
+        </div>
+     </footer>
+    <!-- Importing socket Library from server -->
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+</body>
+</html>
