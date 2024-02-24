@@ -64,7 +64,7 @@ io.on('connection' , (socket)=>{
         });
         
         // Getting previous chat from the database and sending it to client--
-        await MessageModel.find().sort({timestamp : 1}).limit(25)
+        await MessageModel.find().sort({timestamp : -1}).limit(25)
            .then(messages=>{
                 // Emitting 'load-messages' event to send messages to client--
                 socket.emit('load-messages', messages);

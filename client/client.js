@@ -27,7 +27,9 @@
                     messageElement.classList.add('left');
                     messageElement.classList.add('message');
                     messageElement.innerText = new Date(message.timestamp).toLocaleString() + "-" + message.username + ":" + message.text;
-                    messageList.appendChild(messageElement);
+                   // Use insertBefore....to append at first position instead of last,,,
+                   // To control the order of apparence of previous messages.
+                    messageList.insertBefore(messageElement , messageList.firstChild);
                     
                 });
           })
